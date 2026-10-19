@@ -1,171 +1,52 @@
-<h3 align="center">
-  <img src="https://teedy.io/img/github-title.png" alt="Teedy" width=500 />
-</h3>
+# 在线拍卖系统
 
-[![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
+## 项目概述
 
-Teedy is an open source, lightweight document management system for individuals and businesses.
+在线拍卖系统为商品卖家和买家提供线上竞价交易服务。卖家可以发布商品并设置起拍价、竞拍时间和加价规则；买家可以浏览拍品、参与竞价并对成交订单进行支付。
 
-<hr />
-<h2 align="center">
-  ✨ <a href="https://github.com/users/jendib/sponsorship">Sponsor this project if you use and appreciate it!</a> ✨
-</h2>
-<hr />
+项目旨在让拍卖过程更公开、可追踪，减少线下拍卖在时间和地域上的限制，并为交易双方提供统一的订单及售后处理流程。
 
-![New!](https://teedy.io/img/laptop-demo.png?20180301)
+**目标用户：**
+- 需要通过竞价方式出售商品的个人卖家或商家
+- 希望参与竞价购买商品的个人买家
+- 负责拍品审核、交易管理和纠纷处理的平台运营人员
 
-# Demo
+## 功能介绍
 
-A demo is available at [demo.teedy.io](https://demo.teedy.io)
+1. **用户管理**：支持用户注册、登录、个人资料维护和角色权限管理。
+2. **拍品管理**：支持卖家发布、编辑和下架拍品，填写商品描述、图片、起拍价和竞拍时间。
+3. **拍品审核**：支持运营人员审核拍品信息、处理违规内容并记录审核结果。
+4. **在线竞价**：支持买家对拍品出价，系统校验出价规则并更新当前最高价。
+5. **竞拍管理**：支持开始、结束竞拍，判定最高有效出价者，并处理流拍情况。
+6. **订单与支付**：竞拍成交后生成订单，记录付款状态、订单状态及支付结果。
+7. **物流与收货**：支持卖家登记发货信息，买家查看物流状态并确认收货。
+8. **售后与投诉**：支持用户提交退款或投诉申请，运营人员记录处理进度和结果。
+9. **运营管理**：提供用户、拍品、订单、投诉和基础交易数据的管理功能。
 
-- Guest login is enabled with read access on all documents
-- "admin" login with "admin" password
-- "demo" login with "password" password 
+## 小组成员
 
-# Features
+| 姓名 | 学号 | 分工 |
+|---|---|---|
+| [成员1姓名] | [学号] | [项目负责人/需求分析] |
+| [成员2姓名] | [学号] | [前端开发] |
+| [成员3姓名] | [学号] | [后端开发] |
+| [成员4姓名] | [学号] | [测试与文档] |
 
-- Responsive user interface
-- Optical character recognition
-- LDAP authentication ![New!](https://www.sismics.com/public/img/new.png)
-- Support image, PDF, ODT, DOCX, PPTX files
-- Video file support
-- Flexible search engine with suggestions and highlighting
-- Full text search in all supported files
-- All [Dublin Core](http://dublincore.org/) metadata
-- Custom user-defined metadata ![New!](https://www.sismics.com/public/img/new.png)
-- Workflow system ![New!](https://www.sismics.com/public/img/new.png)
-- 256-bit AES encryption of stored files
-- File versioning ![New!](https://www.sismics.com/public/img/new.png)
-- Tag system with nesting
-- Import document from email (EML format)
-- Automatic inbox scanning and importing
-- User/group permission system
-- 2-factor authentication
-- Hierarchical groups
-- Audit log
-- Comments
-- Storage quota per user
-- Document sharing by URL
-- RESTful Web API
-- Webhooks to trigger external service
-- Fully featured Android client
-- [Bulk files importer](https://github.com/sismics/docs/tree/master/docs-importer) (single or scan mode)
-- Tested to one million documents
+## 技术栈
 
+- 前端：[例如 Vue / React]
+- 后端：[例如 Spring Boot / Node.js]
+- 数据库：[例如 MySQL / PostgreSQL]
+- 版本控制：[Git]
+- 代码托管：[Gitee / GitHub]
 
-# Native Installation
+## 项目运行
 
-## Requirements
+待项目开发完成后补充安装依赖、配置数据库和启动服务的说明。
 
-Before building Teedy from source, you will need to install several prerequisites, including Java 11+, Maven 3+, NPM, Grunt, Tesseract 4, ffmpeg, and mediainfo.
-We give instructions for installing these prerequisites on several platforms below.
+## 项目协作约定
 
-### Linux (Ubuntu 22.04)
-
-```console
-sudo apt install \
-  default-jdk \
-  ffmpeg \
-  grunt \
-  maven \
-  npm \
-  tesseract-ocr \
-  tesseract-ocr-ara \
-  tesseract-ocr-ces \
-  tesseract-ocr-chi-sim \
-  tesseract-ocr-chi-tra \
-  tesseract-ocr-dan \
-  tesseract-ocr-deu \
-  tesseract-ocr-fin \
-  tesseract-ocr-fra \
-  tesseract-ocr-heb \
-  tesseract-ocr-hin \
-  tesseract-ocr-hun \
-  tesseract-ocr-ita \
-  tesseract-ocr-jpn \
-  tesseract-ocr-kor \
-  tesseract-ocr-lav \
-  tesseract-ocr-nld \
-  tesseract-ocr-nor \
-  tesseract-ocr-pol \
-  tesseract-ocr-por \
-  tesseract-ocr-rus \
-  tesseract-ocr-spa \
-  tesseract-ocr-swe \
-  tesseract-ocr-tha \
-  tesseract-ocr-tur \
-  tesseract-ocr-ukr \
-  tesseract-ocr-vie
-```
-
-### Mac
-
-```console
-brew install \
-  ffmpeg \
-  grunt-cli \
-  maven \
-  mediainfo \
-  npm \
-  openjdk \
-  tesseract \
-  tesseract-lang
-```
-
-### Windows
-
-It is highly recommended that you proceed to install Windows Subsystem Linux (WSL), following the link: [Install Linux on Windows with WSL
-](https://docs.microsoft.com/en-us/windows/wsl/install). This will allow you to run a Linux distro (Ubuntu's the default) within the Windows environment, and you can then proceed to follow the Linux (Ubuntu 22.04) instructions to install the dependencies.
-
-**Note**: This would mean that you should proceed to execute the following instructions within the Linux environment as well.
-
-
-## How to build Teedy from the sources
-
-Prerequisites: JDK 11, Maven 3, NPM, Grunt, Tesseract 4
-
-Teedy is organized in several Maven modules:
-
-- docs-core
-- docs-web
-- docs-web-common
-
-First off, clone the repository: `git clone https://github.com/sustech-cs304/Teedy`
-or download the sources from GitHub.
-
-### Launch the build
-
-From the root directory:
-
-```console
-mvn clean -DskipTests install
-```
-
-### Run a stand-alone version
-
-From the `docs-web` directory:
-
-```console
-mvn jetty:run
-```
-
-### Build a .war to deploy to your servlet container
-
-From the `docs-web` directory:
-
-```console
-mvn -Pprod -DskipTests clean install
-```
-
-You will get your deployable WAR in the `docs-web/target` directory.
-
-# Contributing
-
-All contributions are more than welcomed. Contributions may close an issue, fix a bug (reported or not reported), improve the existing code, add new feature, and so on.
-
-The `master` branch is the default and base branch for the project. It is used for development and all Pull Requests should go there.
-
-# License
-
-Teedy is released under the terms of the GPL license. See `COPYING` for more
-information or see <http://opensource.org/licenses/GPL-2.0>.
+- 功能开发和文档修改应通过 Git 提交记录保存。
+- 提交前检查改动内容，避免提交无关文件。
+- 多人修改同一文件前先拉取远程更新。
+- 发生冲突时，由相关成员协商后解决，并提交合并结果。
